@@ -1,23 +1,13 @@
 
 # kwikr
+A Static site generator based on Gulp and Nunjucks.
+It's pre alpha, only use for testing purpose at own risk...
 
 ## Install
-Make sure you have NodeJs installed. Bower and Gulp have to be installed globally. If you don't have them already run:
+Make sure you have NodeJs installed.
 
 ```bash
-npm install -g gulp bower
-```
-
-Now run the folowing commands from the desired directory:
-```bash
-git clone https://github.com/yomena/kwikr.git
-```
-```bash
-cd kwikr
-```
-
-```bash
-npm install
+npm install Kwikr
 ```
 
 ```bash
