@@ -7,7 +7,7 @@ It's pre alpha, only use for testing purpose at own risk...
 Make sure you have NodeJs installed.
 
 ```bash
-npm install Kwikr
+npm install kwikr
 ```
 
 ```bash
