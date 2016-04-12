@@ -1,8 +1,13 @@
 {
   "name": "kwikr",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Build static websites quickly.",
-  "main": "package.json",
+  "main": "src/settings.json",
+  "files": [
+      "src/",
+      "bower.json",
+      "gulpfile.js"
+  ],
   "dependencies": {
   },
   "devDependencies": {
