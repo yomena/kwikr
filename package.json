@@ -1,8 +1,8 @@
 {
   "name": "kwikr",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Build static websites quickly.",
-  "main": "src/settings.json",
+  "main": "package.json",
   "files": [
       "src/",
       "bower.json",
