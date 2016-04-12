@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'publish' ]
+2 info using npm@3.8.3
+3 info using node@v5.10.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/ivan/filip/kwikr',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/ivan/.npm/kwikr/0.1.0/package.tgz not in flight; packing
+9 verbose correctMkdir /home/ivan/.npm correctMkdir not in flight; initializing
+10 info lifecycle kwikr@0.1.0~prepublish: kwikr@0.1.0
+11 silly lifecycle kwikr@0.1.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/ivan/.npm/kwikr/0.1.0/package.tgz',
+12 verbose tar pack   '/home/ivan/filip/kwikr' ]
+13 verbose tarball /home/ivan/.npm/kwikr/0.1.0/package.tgz
+14 verbose folder /home/ivan/filip/kwikr
+15 verbose addLocalTarball adding from inside cache /home/ivan/.npm/kwikr/0.1.0/package.tgz
+16 verbose correctMkdir /home/ivan/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd kwikr@0.1.0
+18 verbose afterAdd /home/ivan/.npm/kwikr/0.1.0/package/package.json not in flight; writing
+19 verbose correctMkdir /home/ivan/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/ivan/.npm/kwikr/0.1.0/package/package.json written
+21 silly publish { name: 'kwikr',
+21 silly publish   version: '0.1.0',
+21 silly publish   description: 'Build static websites quickly.',
+21 silly publish   main: 'gulpfile.js',
+21 silly publish   dependencies:
+21 silly publish    { del: '^2.2.0',
+21 silly publish      'gulp-bower': '^0.0.13',
+21 silly publish      'gulp-cache': '^0.4.2',
+21 silly publish      'gulp-concat': '^2.6.0',
+21 silly publish      'gulp-cssnano': '^2.1.0',
+21 silly publish      'gulp-data': '^1.2.1',
+21 silly publish      'gulp-imagemin': '^2.4.0',
+21 silly publish      'gulp-livereload': '^3.8.1',
+21 silly publish      'gulp-nunjucks-render': '^1.1.0',
+21 silly publish      'gulp-rename': '^1.2.2',
+21 silly publish      'gulp-ruby-sass': '^2.0.6',
+21 silly publish      'gulp-uglify': '^1.5.1',
+21 silly publish      'run-sequence': '^1.1.5' },
+21 silly publish   devDependencies: {},
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository: { type: 'git', url: 'git+https://github.com/yomena/kwikr.git' },
+21 silly publish   keywords: [ 'Gulp', 'Nunjucks' ],
+21 silly publish   author: { name: 'yomena' },
+21 silly publish   url: 'http://yomena.com',
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/yomena/kwikr/issues' },
+21 silly publish   homepage: 'https://github.com/yomena/kwikr#readme',
+21 silly publish   readme: '\n# kwikr\n\n## Install\nMake sure you have NodeJs installed. Bower and Gulp have to be installed globally. If you don\'t have them already run:\n\n```bash\nnpm install -g gulp bower\n```\n\nNow run the folowing commands from the desired directory:\n```bash\ngit clone https://github.com/yomena/kwikr.git\n```\n```bash\ncd kwikr\n```\n\n```bash\nnpm install\n```\n\n```bash\nbower install\n```\n\n```bash\ngulp\n```\n\nThat\'s it! kwikr is installed.\n\nRun ```gulp watch``` to automatically build on every file change or ```gulp``` to rebuild the entire project.\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '16f93986331f6f624f0bf5cc76d71ed3797d17e9',
+21 silly publish   _id: 'kwikr@0.1.0',
+21 silly publish   _shasum: '7358adb18828581f7e147b97848d1482a3243f40',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name kwikr
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'kwikr',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'kwikr',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/kwikr
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /home/ivan/.npm/kwikr/0.1.0/package.tgz
+30 verbose stack Error: auth required for publishing
+30 verbose stack     at CachingRegistryClient.publish (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
+30 verbose stack     at /usr/lib/node_modules/npm/lib/publish.js:137:14
+30 verbose stack     at mapToRegistry (/usr/lib/node_modules/npm/lib/utils/map-to-registry.js:62:3)
+30 verbose stack     at publish_ (/usr/lib/node_modules/npm/lib/publish.js:106:3)
+30 verbose stack     at Array.<anonymous> (/usr/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+30 verbose stack     at LOOP (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+30 verbose stack     at LOOP (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+30 verbose stack     at chain (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+30 verbose stack     at /usr/lib/node_modules/npm/lib/publish.js:72:5
+30 verbose stack     at RES (/usr/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+31 verbose cwd /home/ivan/filip/kwikr
+32 error Linux 3.13.0-85-generic
+33 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
+34 error node v5.10.1
+35 error npm  v3.8.3
+36 error code ENEEDAUTH
+37 error need auth auth required for publishing
+38 error need auth You need to authorize this machine using `npm adduser`
+39 verbose exit [ 1, true ]
