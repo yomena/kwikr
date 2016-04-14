@@ -1,25 +1,28 @@
 
 # kwikr
-WIP - Not working yet...
 
-<!--
 A Static site generator based on Gulp and Nunjucks.
-It's pre alpha, only use for testing purpose at own risk...
+It's pre alpha, use for testing purpose only and at own risk...
+
 ## Install
-Make sure you have NodeJs installed.
 
 ```bash
-npm install kwikr
+npm install -g kwikr
 ```
 
+Run the following commands from your desired directory
+
 ```bash
-bower install
+kwikr new <Project_Name>
+cd <Project_Name>
+npm install
+gulp init
 ```
 
 ```bash
 gulp
 ```
 
-That's it! kwikr is installed.
+That's it! kwikr is installed and you successfully created your first project.
 
-Run ```gulp watch``` to automatically build on every file change or ```gulp``` to rebuild the entire project. -->
+Run ```gulp watch``` to automatically build on every file change or ```gulp``` to rebuild the entire project.
