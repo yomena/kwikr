@@ -1,5 +1,6 @@
 
 # kwikr
+[![Dependency Status](https://david-dm.org/yomena/kwikr.svg)](https://david-dm.org/yomena/kwikr)
 
 A Static site generator based on Gulp and Nunjucks.
 It's pre alpha, use for testing purpose only and at own risk...
