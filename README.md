@@ -19,10 +19,6 @@ npm install
 gulp init
 ```
 
-```bash
-gulp
-```
-
 That's it! kwikr is installed and you successfully created your first project.
 
 Run ```gulp watch``` to automatically build on every file change or ```gulp``` to rebuild the entire project.
