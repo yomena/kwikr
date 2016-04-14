@@ -2,7 +2,10 @@
   "name": "kwikr",
   "version": "1.0.0",
   "description": "",
-  "main": "kwikr.js",
+  "main": "./lib/kwikr.js",
+  "bin": {
+    "kwikr": "./bin/kwikr"
+  },
   "directories": {
     "test": "test"
   },
