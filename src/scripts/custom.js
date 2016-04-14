@@ -1,6 +1,0 @@
-/*!
- * Javascript
- */
-$(document).ready(function() {
-    
-});
