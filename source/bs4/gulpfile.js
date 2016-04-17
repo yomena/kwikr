@@ -7,7 +7,7 @@
 // Load plugins
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
-var ower = require('gulp-bower');
+var bower = require('gulp-bower');
 //var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 //jshint = require('gulp-jshint');
