@@ -5,23 +5,23 @@
 'use strict';
 
 // Load plugins
-var gulp = require('gulp'),
-sass = require('gulp-ruby-sass'),
-bower = require('gulp-bower'),
-//autoprefixer = require('gulp-autoprefixer'),
-cssnano = require('gulp-cssnano'),
-//jshint = require('gulp-jshint'),
-uglify = require('gulp-uglify'),
-imagemin = require('gulp-imagemin'),
-rename = require('gulp-rename'),
-concat = require('gulp-concat'),
-cache = require('gulp-cache'),
-livereload = require('gulp-livereload'),
-del = require('del'),
-runSequence = require('run-sequence'),
-nunjucksRender = require('gulp-nunjucks-render'),
-data = require('gulp-data'),
-sources = require('./src/scripts/sources.json');
+var gulp = require('gulp');
+var sass = require('gulp-ruby-sass');
+var ower = require('gulp-bower');
+//var autoprefixer = require('gulp-autoprefixer');
+var cssnano = require('gulp-cssnano');
+//jshint = require('gulp-jshint');
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var rename = require('gulp-rename');
+var concat = require('gulp-concat');
+var cache = require('gulp-cache');
+var livereload = require('gulp-livereload');
+var del = require('del');
+var runSequence = require('run-sequence');
+var nunjucksRender = require('gulp-nunjucks-render');
+var data = require('gulp-data');
+var sources = require('./src/scripts/sources.json');
 
 
 // Styles
