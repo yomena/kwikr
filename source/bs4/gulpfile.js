@@ -20,7 +20,8 @@ livereload = require('gulp-livereload'),
 del = require('del'),
 runSequence = require('run-sequence'),
 nunjucksRender = require('gulp-nunjucks-render'),
-data = require('gulp-data');
+data = require('gulp-data'),
+sources = require('./src/scripts/sources.json');
 
 
 // Styles
@@ -36,12 +37,7 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-    return gulp.src([
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/tether/dist/js/tether.js',
-        'bower_components/bootstrap/dist/js/bootstrap.js',
-        'src/scripts/**/*.js'
-    ])
+    return gulp.src(sources.dependencies)
     //.pipe(jshint())
     //.pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
