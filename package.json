@@ -29,7 +29,7 @@
   "homepage": "https://github.com/yomena/kwikr#readme",
   "dependencies": {
     "bower": "^1.7.9",
-    "fs-extra": "^0.26.7",
+    "fs-extra": "^0.28.0",
     "gulp": "^3.9.1",
     "inquirer": "^1.0.0",
     "jsonfile": "^2.2.3"

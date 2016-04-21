@@ -21,10 +21,8 @@ Base layout
     </head>
     <body>
         {% include "partials/navigation.njk" ignore missing %}
-        <div class="container">
             {% block content %}
             {% endblock %}
-        </div>
         {% include "partials/footer.njk" ignore missing %}
         <script src="assets/js/main.min.js"></script>
     </body>

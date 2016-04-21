@@ -1,0 +1,33 @@
+{#
+--------------------------------------------------------
+Navigation Metas
+--------------------------------------------------------
+ #}
+
+{% set navbar_links = [{
+	   "href": "index.html",
+	   "id": "index",
+	   "caption": "Index"
+	   },
+	   {
+	   "href": "about.html",
+	   "id": "about",
+	   "caption": "About"
+	   }
+   ] -%}
+
+
+{#
+--------------------------------------------------------
+Navigation
+--------------------------------------------------------
+ #}
+
+<ul>
+    {# Links added via variables show up here. You can manually add custom links or dropdowns before or after the loop #}
+	{% for item in navbar_links %}
+	  	<li class="nav-item {% if item.id|e == page_name %} active{% endif%}">
+		  	<a href="{{ item.href|e }}" class="nav-link">{{ item.caption|e }}</a>
+		</li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,17 @@
+{
+    "name": "kwikr",
+    "version": "0.1.0",
+    "authors": [
+        "yomena <contact@yomena.de>"
+    ],
+    "license": "MIT",
+    "homepage": "http://yomena.com",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "modernizr": "~3.3.1"
+    }
+}
