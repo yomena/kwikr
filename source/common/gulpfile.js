@@ -1,7 +1,3 @@
-/*!
-* Gulp
-*/
-
 'use strict';
 
 // Load plugins
