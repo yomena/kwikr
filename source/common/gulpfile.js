@@ -58,18 +58,15 @@ gulp.task('fonts', function() {
 
 
 // Nunjucks
-gulp.task('nunjucks', function() {
-    nunjucksRender.nunjucks.configure(['src/templates/']);
-    // Gets .html and .nunjucks files in pages
+gulp.task('nunjucks', function () {
     return gulp.src('src/templates/pages/**/*.+(html|njk)')
-    // Adding data to Nunjucks
     .pipe(data(function() {
       return require('./settings.json')
     }))
-    // Renders template with nunjucks
-    .pipe(nunjucksRender())
-    // output files in app folder
-    .pipe(gulp.dest('dist'))
+    .pipe(nunjucksRender({
+      path: 'src/templates'
+    }))
+    .pipe(gulp.dest('dist'));
 });
 
 
