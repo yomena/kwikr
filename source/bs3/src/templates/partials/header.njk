@@ -1,0 +1,48 @@
+{#
+--------------------------------------------------------
+Navigation Metas
+--------------------------------------------------------
+ #}
+
+{% set navbar_links = [{
+	   "href": "index.html",
+	   "id": "index",
+	   "caption": "Index"
+	   },
+	   {
+	   "href": "about.html",
+	   "id": "about",
+	   "caption": "About"
+	   }
+   ] -%}
+
+
+{#
+--------------------------------------------------------
+Header
+--------------------------------------------------------
+ #}
+
+ <nav class="navbar navbar-default navbar-static-top">
+   <div class="container">
+       <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">{{ project_name }}</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+              {# Links added via variables show up here. You can manually add custom links or dropdowns before or after the loop #}
+              {% for item in navbar_links %}
+                  <li class="{% if item.id|e == page_name %} active{% endif%}">
+                      <a href="{{ item.href|e }}">{{ item.caption|e }}</a>
+                  </li>
+              {% endfor %}
+          </ul>
+      </div><!-- /.navbar-collapse -->
+   </div>
+ </nav>

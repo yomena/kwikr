@@ -1,0 +1,31 @@
+{#
+--------------------------------------------------------
+Base layout
+--------------------------------------------------------
+ #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page_name }} | {{ project_name }}</title>
+        <meta name="description" content="{{ project_description }}">
+        <meta name="keywords" content="{{ project_keywords }}">
+        <meta name="author" content="{{ project_author }}">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="assets/css/main.min.css">
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        {% include "partials/header.njk" ignore missing %}
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+        {% include "partials/footer.njk" ignore missing %}
+        <script src="assets/js/main.min.js"></script>
+    </body>
+</html>

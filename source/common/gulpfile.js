@@ -3,6 +3,7 @@
 // Load plugins
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
+var less = require('gulp-less');
 var bower = require('gulp-bower');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
@@ -17,17 +18,31 @@ var runSequence = require('run-sequence');
 var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
 var sources = require('./src/scripts/sources.json');
+var settings = require('./settings.json');
 
 
 // Styles
 gulp.task('styles', function() {
-    return sass('src/styles/main.scss', { style: 'expanded' })
-    .pipe(gulp.dest('dist/assets/css'))
-	.pipe(autoprefixer('last 2 version'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(cssnano())
-    .pipe(gulp.dest('dist/assets/css'));
+    if(settings.css_preprocessor === 'sass'){
+        return sass('src/styles/main.scss', { style: 'expanded' })
+        .pipe(gulp.dest('dist/assets/css'))
+    	.pipe(autoprefixer('last 2 version'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(cssnano())
+        .pipe(gulp.dest('dist/assets/css'));
+    }
+    else{
+        return gulp.src('src/styles/main.less')
+        .pipe(less())
+        .pipe(gulp.dest('dist/assets/css'))
+    	.pipe(autoprefixer('last 2 version'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(cssnano())
+        .pipe(gulp.dest('dist/assets/css'));
+    }
 });
+
+
 
 
 // Scripts

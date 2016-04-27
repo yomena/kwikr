@@ -1,0 +1,6 @@
+{
+    "dependencies": [
+		"bower_components/jquery/dist/jquery.js",
+        "src/scripts/**/*.js"
+    ]
+}
