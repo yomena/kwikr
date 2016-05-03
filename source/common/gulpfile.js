@@ -1,4 +1,4 @@
-'use strict';
+
 
 // Load plugins
 var gulp = require('gulp');
@@ -76,7 +76,7 @@ gulp.task('fonts', function() {
 gulp.task('nunjucks', function () {
     return gulp.src('src/templates/pages/**/*.+(html|njk)')
     .pipe(data(function() {
-      return require('./settings.json')
+		return require('./settings.json');
     }))
     .pipe(nunjucksRender({
       path: 'src/templates'
