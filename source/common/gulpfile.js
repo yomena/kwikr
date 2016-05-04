@@ -25,20 +25,20 @@ var settings = require('./settings.json');
 gulp.task('styles', function() {
     if(settings.css_preprocessor === 'sass'){
         return sass('src/styles/main.scss', { style: 'expanded' })
-        .pipe(gulp.dest('dist/assets/css'))
+        .pipe(gulp.dest('public/assets/css'))
     	.pipe(autoprefixer('last 2 version'))
         .pipe(rename({suffix: '.min'}))
         .pipe(cssnano())
-        .pipe(gulp.dest('dist/assets/css'));
+        .pipe(gulp.dest('public/assets/css'));
     }
     else{
         return gulp.src('src/styles/main.less')
         .pipe(less())
-        .pipe(gulp.dest('dist/assets/css'))
+        .pipe(gulp.dest('public/assets/css'))
     	.pipe(autoprefixer('last 2 version'))
         .pipe(rename({suffix: '.min'}))
         .pipe(cssnano())
-        .pipe(gulp.dest('dist/assets/css'));
+        .pipe(gulp.dest('public/assets/css'));
     }
 });
 
@@ -49,10 +49,10 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     return gulp.src(sources.dependencies)
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('dist/assets/js'))
+    .pipe(gulp.dest('public/assets/js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/assets/js'));
+    .pipe(gulp.dest('public/assets/js'));
 });
 
 
@@ -60,7 +60,7 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
     return gulp.src('src/images/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/assets/img'));
+    .pipe(gulp.dest('public/assets/img'));
 
 });
 
@@ -68,7 +68,7 @@ gulp.task('images', function() {
 // Fonts
 gulp.task('fonts', function() {
     return gulp.src('bower_components/font-awesome/fonts/**/*')
-    .pipe(gulp.dest('dist/assets/fonts'));
+    .pipe(gulp.dest('public/assets/fonts'));
 });
 
 
@@ -81,13 +81,13 @@ gulp.task('nunjucks', function () {
     .pipe(nunjucksRender({
       path: 'src/templates'
     }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('public'));
 });
 
 
 // Clean
 gulp.task('clean', function() {
-    del(['dist/**/*']);
+    del(['public/**/*']);
 });
 
 // Install Bower components
@@ -96,12 +96,12 @@ gulp.task('bower', function() {
 });
 
 
-// Default Gulp task - Rebuilds the entire dist
+// Default Gulp task - Rebuilds the entire public
 gulp.task('default', function() {
     runSequence('clean', 'styles', 'scripts', 'images', 'fonts', 'nunjucks');
 });
 
-// Gulp Init - Installs Bower components and builds the entire dist
+// Gulp Init - Installs Bower components and builds the entire public project
 gulp.task('init', function() {
     runSequence('clean', 'bower', 'styles', 'scripts', 'images', 'fonts', 'nunjucks');
 });
@@ -125,7 +125,7 @@ gulp.task('watch', function() {
     // Create LiveReload server
     livereload.listen();
 
-    // Watch any files in dist/, reload on change
-    gulp.watch(['dist/**']).on('change', livereload.changed);
+    // Watch any files in public/, reload on change
+    gulp.watch(['public/**']).on('change', livereload.changed);
 
 });
