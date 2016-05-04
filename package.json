@@ -29,9 +29,13 @@
   "homepage": "https://github.com/yomena/kwikr#readme",
   "dependencies": {
     "bower": "^1.7.9",
+    "cli-spinner": "^0.2.5",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
     "fs-extra": "^0.30.0",
     "gulp": "^3.9.1",
     "inquirer": "^1.0.2",
-    "jsonfile": "^2.3.0"
+    "jsonfile": "^2.3.0",
+    "npm-cmd": "^0.2.0"
   }
 }
