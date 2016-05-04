@@ -31,7 +31,7 @@
     "bower": "^1.7.9",
     "fs-extra": "^0.30.0",
     "gulp": "^3.9.1",
-    "inquirer": "^1.0.0",
-    "jsonfile": "^2.2.3"
+    "inquirer": "^1.0.2",
+    "jsonfile": "^2.3.0"
   }
 }
